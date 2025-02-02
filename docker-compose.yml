@@ -35,6 +35,13 @@ x-n8n: &service-n8n
     - NODE_ENV=production
     - WEBHOOK_URL=https://${SUBDOMAIN}.${DOMAIN_NAME}/
     - GENERIC_TIMEZONE=${GENERIC_TIMEZONE}
+    - N8N_EMAIL_MODE=smtp
+    - N8N_SMTP_HOST=mail.smtp2go.com
+    - N8N_SMTP_PORT=587
+    - N8N_SMTP_USER=${N8N_SMTP_USER}
+    - N8N_SMTP_PASS=${N8N_SMTP_PASS}
+    - N8N_SMTP_SENDER=${N8N_SMTP_SENDER}
+    - N8N_SMTP_SSL=$(N8N_SMTP_SSL}
   links:
     - postgres
 
